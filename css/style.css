@@ -43,6 +43,7 @@ a{
     padding: 10px 50px;
     margin: 20px;
     justify-content: space-between;
+    
 }
 .introduction p{
     margin-bottom: 20px;
@@ -82,6 +83,7 @@ a{
 
 .image-icons h2{
     margin: 16px 0;
+
 }
 
 .guitarist{
@@ -91,7 +93,9 @@ a{
 
 .guitarist h3{
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .guitarist-img{
@@ -102,4 +106,57 @@ a{
 
 .guitarist-img img{
     width: 100%;
+}
+.guitarist-img div{
+    box-shadow: 5px 5px 13px rgb(158, 158, 158);
+    padding-bottom:20px ;
+}
+.guitarist-img span{
+    font-size: 15px;
+    width: 30%;
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+.guitarist-img p{
+    padding-top: 7%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#foot{
+    background-color: rgb(12, 12, 34);
+    padding: 20px 60px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.footer{
+    padding: 20px 0px;
+}
+.foot-icons{
+margin: 20px;
+    gap: 10px;
+    column-rule-color: white;
+}
+.foot-links1, .foot-links2{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 15px;
+}
+.foot-ter{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 15px;
+}
+.foot-links1 a,.foot-links2 a{
+    color: white;
+    padding: 15px;
+}
+.reserved p{
+    margin-top: 20px;
 }
