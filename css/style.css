@@ -17,9 +17,10 @@ a{
     align-items: center;
     padding: 20px 60px;
     gap: 30px;
-    
-
+    position: relative;
+    z-index: 7
 }
+
 .nav-links{
     display: flex;
     gap:50px;
@@ -31,35 +32,60 @@ a{
     border-radius: 30px;
     width: 12%;
     padding: 7px 12px;
+    /* margin: auto; */
 
     
 }
 
-.introduction{
+.nav-links-anchor2{
+    background-color:rgba(14, 238, 14, 0.575) ;
+    border-radius: 30px;
     width: 40%;
+    padding: 7px 12px;
+    margin: auto !important;
+    text-align: center;
+}
+
+.introduction{
+    align-items: center;
+    margin: auto;
+    width: 31%;
 }
 
 #intro{
     display: flex;
     align-items: center;
-    padding: 10px 50px;
-    margin: 20px;
+    /* padding: 10px 50px;s */
+    margin: 20px 0px;
     justify-content: space-between;
-    
+    position: relative;
+    background-color: rgba(163, 160, 160, 0.87);
 }
+/* .intro-background{
+    position: absolute;
+    width: 75%;
+    right: -250px;
+    top: -140px;
+    z-index: 0 !important;
+} */
+
 .introduction p{
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: 18px;
+    
 }
 .introduction h1{
     margin-bottom: 20px;
-    font-size: 40px;
+    font-size: 46px;
 }
 .intro-image{
-    width: 40%;
+    width: 50%;
     padding: 10px;
 }
-
+/* #nav-links{
+width: 50%;
+margin: auto;
+} */
    
 
 #feed{
@@ -75,6 +101,8 @@ a{
 .feeder h2{
     margin-bottom: 20px;
     font-size: 40px;
+    width: 100%;
+
 }
 
 .image-icons{
@@ -94,8 +122,13 @@ a{
 }
 
 .guitarist h3{
+    font-size:19px ;
     margin-bottom: 20px;
-    font-size: 15px;
+}
+
+.guitarist h4{
+    margin-bottom: 20px;
+    font-size: 10px;
 }
 
 .guitarist-img{
@@ -202,6 +235,9 @@ margin: 20px;
     .guitarist h3{
         font-size: 30px;
     }
+    .foot{
+        padding: 20px 30px;
+    }
 } 
 @media screen and (max-width: 768px){
    .introduction h1{
@@ -228,7 +264,98 @@ margin: 20px;
     display: grid;
     grid-template-columns: repeat( 2, 1fr);
   }
-}    
+  .foot-links1, .foot-links2{
+    width:60%
+  }
+}
+@media screen and ( max-width:576px){
+    #intro{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-bottom: 30px;
+    }
+
+    .image-icons{
+        display: grid;
+        grid-template-columns: repeat( 1,1fr);
+    }
+    .guitarist-img{
+        display: grid;
+        grid-template-columns: repeat( 1, 1fr);
+    }
+   
+    .intro-image{
+        width: 60%;
+    }
+
+    .introduction{
+        width: 70%;
+        text-align: center;
+    }
+
+    .introduction p{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px    
+        
+    }
+    .introduction h1{
+        font-size: 28px;
+    }
+    .feeder{
+        width:90% ;
+        text-align:center ;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .feeder h2{
+        font-size: 40px;
+        
+    }
+    .feeder p{
+      text-align: center;  
+      display: flex;
+      flex-direction: column;  
+      font-size: 16px;
+    }
+    .guitarist h3{
+        font-size: 20px;
+    }
+    .guitarist-img span{
+        font-size: 24px;
+    }
+    #nav-links{
+        width: 30%;
+        margin: auto ;
+    }
+    .nav-links-anchor2{
+        margin: auto !important;
+        font-size: 18px;
+        border-radius: 20px;
+        padding: 10px 15px;
+        margin-bottom: 20px;
+    }
+    .test{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .image-icons{
+        text-align: center;
+    }
+    .footer{
+      flex-direction: column;
+    }
+}
+@media screen and (max-width: 375){
+    .feeder{
+        width: 90%;
+        display: none;
+    }
+}
+    
+
 
 
     
