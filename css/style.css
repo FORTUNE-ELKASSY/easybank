@@ -4,9 +4,12 @@
     box-sizing: border-box;
     font-family: 'Public Sans';
 }
+
 html,body{
-     overflow-x:hidden ;
+     overflow-x:hidden;
+     scroll-behavior: smooth;
 }
+
 a{
     text-decoration: none;
 }
@@ -18,7 +21,8 @@ a{
     padding: 20px 60px;
     gap: 30px;
     position: relative;
-    z-index: 7
+    z-index: 7;
+    background-color: #fff;
 }
 
 .nav-links{
@@ -27,20 +31,18 @@ a{
     padding: 10px 30px;
     
 }
+.toggle{
+    display: none;
+}
 .nav-links-anchor{
     background-color:rgba(14, 238, 14, 0.575) ;
     border-radius: 30px;
-    width: 12%;
     padding: 7px 12px;
-    /* margin: auto; */
-
-    
 }
 
 .nav-links-anchor2{
     background-color:rgba(14, 238, 14, 0.575) ;
     border-radius: 30px;
-    width: 40%;
     padding: 7px 12px;
     margin: auto !important;
     text-align: center;
@@ -55,19 +57,22 @@ a{
 #intro{
     display: flex;
     align-items: center;
-    /* padding: 10px 50px;s */
-    margin: 20px 0px;
     justify-content: space-between;
     position: relative;
-    background-color: rgba(163, 160, 160, 0.87);
+    /* background-color: rgba(163, 160, 160, 0.87); */
 }
-/* .intro-background{
+
+.intro-background{
     position: absolute;
     width: 75%;
     right: -250px;
     top: -140px;
-    z-index: 0 !important;
-} */
+    z-index: -1 !important;
+}
+
+.intro-background1{
+    display: none;
+}
 
 .introduction p{
     margin-bottom: 20px;
@@ -186,6 +191,12 @@ margin: 20px;
     color: white;
     padding: 15px;
 }
+
+.footLinks{
+    display: flex;
+    gap: 70px;
+}
+
 .foot-links1 a,.foot-links2 a{
     color: white;
     padding: 15px;
@@ -195,6 +206,16 @@ margin: 20px;
 }
 
 @media screen and (max-width:992px){
+
+    #nav{
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .nav-links{
+        gap: 20px;
+    }
+
     .introduction h1{
         font-size: 30px;
     }
@@ -235,11 +256,16 @@ margin: 20px;
     .guitarist h3{
         font-size: 30px;
     }
-    .foot{
+    #foot{
         padding: 20px 30px;
     }
-} 
+}
+
 @media screen and (max-width: 768px){
+    .nav-links-anchor{
+        display: none;
+    }
+
    .introduction h1{
     font-size: 25px;
    }
@@ -264,15 +290,67 @@ margin: 20px;
     display: grid;
     grid-template-columns: repeat( 2, 1fr);
   }
-  .foot-links1, .foot-links2{
-    width:60%
+
+  .footLinks{
+    margin-bottom: 40px;
+}
+
+.reserved{
+    text-align: center;
+    padding-left: 0;
+}
+
+  #foot{
+    flex-direction: column;
   }
 }
+
 @media screen and ( max-width:576px){
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 20px 40px;
+        background-color: hsl(243, 87%, 12%);
+        position: fixed;
+        top: -34%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 70%;
+        transition: .5s;
+        box-shadow: 5px 5px 13px rgb(158, 158, 158);
+    }
+
+    .toggle{
+        display: block;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .closeIcon{
+        display: none;
+    }
+
+    .nav-links a{
+        color: #fff;
+    }
+
     #intro{
         display: flex;
         flex-direction: column-reverse;
         padding-bottom: 30px;
+    }
+
+    .intro-background{
+        display: none;
+    }
+    
+    .intro-background1{
+        display: block;
+        position: absolute;
+        width: 100%;
+        top: -18%;
+        z-index: -1 !important;
     }
 
     .image-icons{
@@ -348,15 +426,34 @@ margin: 20px;
       flex-direction: column;
     }
 }
-@media screen and (max-width: 375){
-    .feeder{
+
+@media screen and (max-width: 375px){
+    .footLinks{
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .introduction{
         width: 90%;
-        display: none;
+    }
+    .feeder{
+        width: 98%;
+    }
+
+    #feed{
+        padding: 60px 20px;
+    }
+
+    .feeder h2{
+        font-size: 28px;
+    }
+
+    .intro-image{
+        width: 90%;
+    }
+
+    .intro-background1{
+        top: 0%;
     }
 }
-    
-
-
-
-    
-
